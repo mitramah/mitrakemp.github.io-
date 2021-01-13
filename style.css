@@ -1,0 +1,288 @@
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Montserrat', Arial, serif;
+}
+::selection {
+	background-color: #EBEBF2;
+	color: #83828D;
+}
+
+a {
+	text-decoration: none;
+}
+ul #demo  {
+	padding-left: 0;
+    list-style-type: none;
+   
+}
+
+li #demo{
+    list-style: none;
+}
+
+
+/* ==================================== */
+/*		  	  Navigaton Menu		
+/* ==================================== */
+
+.menu-wrap {
+	background-color: #84D07A;
+	position: fixed;
+	top: 0;
+	height: 100%;
+	width: 280px;
+	margin-left: -280px;
+	font-size: 1em;
+	font-weight: 700;
+	overflow: auto;
+	transition: .25s;
+	z-index: 10;
+}
+.menu-show {
+	margin-left: 0;
+	box-shadow: 4px 2px 15px 1px #B9ADAD;
+}
+.menu-sidebar {
+	margin: 75px 0 80px 10px;
+	position: relative;
+	top: 70px;
+}
+.menu-sidebar li {
+	padding: 18px 22px 0;
+}
+.menu-sidebar li > a {
+	color: #f3f3f3;
+	font-size: 1.18em;
+	position: relative;
+}
+.menu-sidebar li > a::after {
+	content: "";
+	display: block;
+	height: 0.15em;
+	position: absolute;
+	top: 100%;
+	width: 100%;
+	left: 50%;
+	transform: translate(-50%);
+	background-image: linear-gradient(to right, transparent 50.3%, #FFFA3B 50.3%);
+	transition: background-position .2s .1s ease-out;
+	background-size: 200% auto;
+    
+}
+.menu-sidebar li > a:hover::after {
+	background-position: -100% 0;
+}
+.menu-sidebar .menu-item-has-children {
+	position: relative;
+}
+.menu-sidebar .menu-item-has-children .sub-menu {
+	display: none;
+}
+.sidebar-menu-arrow::after {
+	content: "\f107";
+	font-family: 'FontAwesome';
+	padding: 10px;
+	color: #FFFA3B;
+	position: relative;
+}
+.sidebar-menu-arrow:hover::after {
+	cursor: pointer;
+	color: #fff;
+}
+.sidebar-menu-arrow:active::after {
+	top: 2px;
+}
+
+
+/*Hamburger Button*/
+/* =================================================*/
+/* the codes are adopted from Jesse Couch */
+/* web link : https://codepen.io/designcouch/pen/Atyop */
+/*===================================================*/
+
+.toggle-button {
+	position: fixed;
+	width: 44px;
+	height: 40px;
+	top: 50px;
+	left: 40px;
+	padding: 4px;
+	transition: .25s;
+	z-index: 15;
+}
+.toggle-button:hover {
+	cursor: pointer;
+}
+.toggle-button .menu-bar {
+	position: absolute;
+	border-radius: 2px;
+	width: 80%;
+	transition: .5s;
+}
+.toggle-button .menu-bar-top {
+	border: 4px solid #555;
+	border-bottom: none;
+	top: 0;
+}
+.toggle-button .menu-bar-middle {
+	height: 4px;
+	background-color: #555;
+	margin-top: 7px;
+	margin-bottom: 7px;
+	top: 4px;
+}
+.toggle-button .menu-bar-bottom {
+	border: 4px solid #555;
+	border-top: none;
+	top: 22px;
+}
+.button-open {
+	left: 25px;
+}
+.button-open .menu-bar-top {
+	border-color: #fff;
+	transform: rotate(45deg) translate(8px, 8px);
+	transition: .5s;
+}
+.button-open .menu-bar-middle {
+	background-color: #fff;
+	transform: translate(230px);
+	transition: .1s ease-in;
+	opacity: 0;
+}
+.button-open .menu-bar-bottom {
+	border-color: #fff;
+	transform: rotate(-45deg) translate(7px, -7px);
+	transition: .5s;
+}
+
+
+
+/* Text Block */
+.wrapper {
+	width: 50%;
+	margin: 100px auto 0;
+	color: #83828D;
+}
+.wrapper .text {
+	padding: 30px;
+}
+.wrapper .text .heading {
+	margin-bottom: 40px;
+	font-size: 2em;
+}
+.wrapper .text p {
+	line-height: 1.6em;
+}
+.wrapper .text .button {
+	margin-top: 40px;
+}
+
+ p{
+    text-indent: 50px;
+}
+#content p{
+    text-indent: 0px;
+}
+
+
+figure {
+     font-size: smaller;
+     text-align: center; 
+     text-indent: -30px;
+         
+}
+
+div .pic {
+
+    float: right;
+    width: 350px;
+    margin: 0 0 15px 20px;
+    padding: 15px;
+    border: 1px ;
+   
+}
+
+div .fig{
+
+    float: left;
+    width: 300px;
+    margin: 0 0 15px 20px;
+    padding: 15px;
+    border: 1px ;
+    text-align: center;
+}
+
+
+
+
+
+/* ==========================================*/
+/* Sctoll to top*/
+/* https://answers.squarespace.com/questions/10479/how-can-i-add-a-scroll-to-top-button.html */
+/*===========================================*/
+
+.scrollToTop{
+ 
+    width:100px;
+    height:100px;
+	padding:10px; 
+	background:#EBEBF2;
+	position:fixed;
+	top:600px;
+	right:40px;
+	display:none;
+	background: url('img/scroll_up.png') no-repeat 0px 20px;
+}
+.scrollToTop:hover{
+	text-decoration:none;
+}
+
+
+.container h5{ 
+    text-align: center;
+}
+
+/*------------------------------------------------*/
+/*      Social Media Icons */
+/*-------------------------------------------------*/
+/* the icons adopted from FontAwsome*/
+/* web link: http://astronautweb.co/snippet/font-awesome/ */
+
+.fa {
+  padding: 5px;
+  font-size: 30px;
+  text-align: center;
+  text-decoration: none;
+  margin: 3px 2px 10px; 
+ 
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  color: #83828D;
+}
+
+.fa-twitter {
+  color: #83828D;
+}
+
+
+.fa-linkedin {
+  color: #83828D;
+}
+
+.fa-instagram {
+  color: #83828D;
+}
+
+.fa-youtube-play {
+  color: #83828D;
+}
